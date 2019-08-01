@@ -2,3 +2,6 @@
 .DS_Store
 .idea/
 out/
+.gitignore
+3pgFirstProgram/3pgFirstProgram/3pgFirstProgram.iml
+3pgOOP/3pgOOP.iml

@@ -1,6 +1,7 @@
-package OOP;
+package OOP.Encapsulation;
 
-public class OOPProgramming {
+public class OOPEncapsulation {
+
     private int account_number;
     private int account_balance;
 

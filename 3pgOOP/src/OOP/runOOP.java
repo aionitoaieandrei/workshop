@@ -1,7 +1,9 @@
 package OOP;
 
+import OOP.Encapsulation.OOPEncapsulation;
+
 public class runOOP {
-    private static OOPProgramming oopObject;
+    private static OOPEncapsulation oopObject;
     private static UnstructuredProgramming unstructuredObject;
 
     public static void main(String args[]){
@@ -10,7 +12,7 @@ public class runOOP {
         unstructuredObject.check_account_balance();
 
         System.out.println("\nOOP Programming");
-        oopObject = new OOPProgramming();
+        oopObject = new OOPEncapsulation();
         oopObject.setAccount_balance(10);
         oopObject.setAccount_number(1);
         oopObject.update_account_balance(100);

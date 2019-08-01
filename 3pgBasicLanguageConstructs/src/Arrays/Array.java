@@ -33,6 +33,7 @@ public class Array {
         for (int count=0; count<arrayWithValues.length; count++) {
             System.out.println("arrayWithValues["+count+"] = "+arrayWithValues[count]);
         }
+
         System.out.println("\nExercise: Print the phrase above!!");
     }
 

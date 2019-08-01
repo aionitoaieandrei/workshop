@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+.DS_Store
+.idea/
+3pgBasicLanguageConstructs/.idea/
+3pgBasicLanguageConstructs/out/
+3pgFirstProgram/.idea/
+3pgFirstProgram/out/
+3pgOOP/.idea/
+3pgOOP/out/
+3pgBasicLanguageConstructs.iml
+src/

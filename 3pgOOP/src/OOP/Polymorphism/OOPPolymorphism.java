@@ -10,6 +10,7 @@ abstract class Animal {
     }
     public abstract String sound();
 }
+/* Notice how sound() is overriden */
 
 class Cow extends Animal {
     public Cow(String name) {

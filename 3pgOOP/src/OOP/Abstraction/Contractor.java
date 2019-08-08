@@ -1,4 +1,4 @@
-package OOP.Abstractization;
+package OOP.Abstraction;
 
 public class Contractor extends Employee {
 

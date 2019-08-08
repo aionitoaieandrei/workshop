@@ -6,7 +6,7 @@ public class ArrayListTest {
     public static void main(String[] args) {
 
         //Creating a generic ArrayList
-        ArrayList arlTest = new ArrayList();
+        ArrayList<String> arlTest = new ArrayList<String>();
 
         //Size of arrayList
         System.out.println("Size of ArrayListTest at creation: " + arlTest.size());

@@ -4,8 +4,8 @@ public class Concatenate{
     public static void main(String[] args) {
 
         //String Concatenation
-        String str1 = "Rock";
-        String str2 = "Star";
+        String str1 = "Be";
+        String str2 = "the QA!";
 
         //Method 1 : Using concat
         String str3 = str1.concat(str2);

@@ -39,3 +39,6 @@ public class ArrayListTest {
         System.out.println(arlTest.contains("K"));
     }
 }
+
+
+

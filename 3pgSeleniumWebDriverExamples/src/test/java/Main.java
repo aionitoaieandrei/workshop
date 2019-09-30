@@ -1,28 +1,51 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "3pgSeleniumWebDriverExamples/chromedriver.exe");
         String pageUrl = "http://automationpractice.com/index.php";
-        // WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
+        //driver.manage().window().fullscreen();
         driver.get(pageUrl);
-        WebElement searchInput = driver.findElement(By.id("search_query_top"));
-        searchInput.sendKeys("dress");
+        //by id
+//        WebElement searchInputById = driver.findElement(By.id("search_query_top"));
+//        searchInputById.sendKeys("dress");
+        //by name
+        WebElement searchInputByName = driver.findElement(By.name("search_query"));
+        searchInputByName.sendKeys("dress");
         //first method
-        searchInput.sendKeys(Keys.ENTER);
+        // searchInputByName.sendKeys(Keys.ENTER);
         //second method
         WebElement searchButton = driver.findElement(By.name("submit_search"));
         searchButton.click();
-//        WebElement element1 = driver.findElement(By.className(""));
-//        WebElement element2 = driver.findElement(By.tagName(""));
-//        WebElement element3 = driver.findElement(By.partialLinkText(""));
-//        WebElement element4 = driver.findElement(By.linkText(""));
-//        WebElement element5 = driver.findElement(By.name(""));
+        //get the total number of dresses
+        List<WebElement> dressesByClass = driver.findElements(By.className("product_img_link"));
+        System.out.println("Number of dresses found by using class name =" + dressesByClass.size());
+        dressesByClass.get(0).click();
+
+        WebElement addToCartButton = driver.findElement(By.id("add_to_cart"));
+        addToCartButton.click();
+
+        WebElement layerCart = driver.findElement(By.id("layer_cart"));
+        layerCart.isDisplayed();
+
+        WebElement contactUsPartialLink = driver.findElement(By.partialLinkText("Contact"));
+        contactUsPartialLink.click();
+
+        WebElement contactUsLink = driver.findElement(By.partialLinkText("Contact us"));
+        contactUsLink.click();
+
+        List<WebElement> links = driver.findElements(By.tagName("a"));
+        for (int i = 0; i < links.size(); i++) {
+            System.out.println(links.get(i).getText());
+        }
         driver.quit();
     }
 }
